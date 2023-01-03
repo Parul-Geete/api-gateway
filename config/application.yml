@@ -1,0 +1,12 @@
+server:
+  port: 8080
+application:
+  name: experian-route
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: experian_route
+        uri: http://localhost:8081
+        predicates:
+        - Path=/experian/**
