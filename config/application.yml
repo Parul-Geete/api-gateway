@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
 application:
   name: experian-route
 spring:
@@ -7,6 +7,6 @@ spring:
     gateway:
       routes:
       - id: experian_route
-        uri: http://localhost:8081
+        uri: http://localhost:8080
         predicates:
         - Path=/experian/**
