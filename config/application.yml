@@ -7,6 +7,10 @@ spring:
     gateway:
       routes:
       - id: experian_route
-        uri: http://localhost:8080
+        uri: http://localhost:8085
         predicates:
         - Path=/experian/**
+      - id: credit-status
+        uri: http://localhost:8080
+        predicates:
+        - Path=/credit-status/**
